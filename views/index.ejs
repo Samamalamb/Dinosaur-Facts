@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Dinosaur Facts Api</title>
+</head>
+<body class="grid place-items-center bg-no-repeat bg-cover bg-center bg-fixed" style="background-image: url('/images/dinos-unsplash.jpg');">
+    <h1 class="text-green-900 text-4xl box p-4">Dinosaur Facts Api</h1>
+
+    <div class="box p-4">
+        <p>Enter in your fact below!</p>
+        <form action="/facts" method="POST">
+            <input class="rounded-2xl py-2 px-3 border-solid border-2 border-green-900 bg-white outline-green-900" type="text" placeholder="fact" name="fact">
+            <button class="btn" type="submit">Submit</button>
+        </form>
+    </div>
+   
+    <div class="box py-4 px-6">
+        <h2 class="text-green-900 text-2xl">Facts</h2>
+    <ul class='facts marker:text-green-900 list-disc'>
+        <% for(let i=0; i < info.length; i++) {%>
+            <li class="fact">
+                <span><%= info[i].fact %></span>
+            </li>
+        <% } %>
+    </ul>
+    </div>
+</body>
+</html>

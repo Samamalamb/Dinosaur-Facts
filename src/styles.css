@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.box{
+    @apply rounded m-2 shadow-lg border-green-900 border-4 bg-slate-50
+}
+
+.btn{
+    @apply rounded-2xl py-2 px-3 cursor-pointer border-solid border-2 border-green-900 hover:border-white hover:bg-green-900 transition ease-out duration-300 transform hover:text-white
+}
